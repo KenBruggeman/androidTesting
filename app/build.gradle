@@ -4,7 +4,7 @@ plugins {
     // id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
-    id 'jacoco'
+    id 'net.saliman.cobertura' version '4.0.0'
 }
 
 android {
@@ -41,6 +41,13 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+        testOptions {
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
     }
 }
 

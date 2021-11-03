@@ -9,8 +9,6 @@ buildscript {
         nav_version = "2.3.5"
         lifecycle_version = "2.3.1"
         room_version = "2.3.0"
-        kotlin_version = "1.5.31"
-        jacocoVersion = '0.8.4'
     }
 
     repositories {

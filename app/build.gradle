@@ -4,6 +4,7 @@ plugins {
     //id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
+    id 'java'
     id 'jacoco'
     id 'org.sonarqube' version '2.8'
 }

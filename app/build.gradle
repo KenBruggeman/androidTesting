@@ -97,21 +97,14 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 }
 
-jacoco {
-    toolVersion = "0.8.7"
-    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
-}
-
-test {
-    finalizedBy jacocoTestReport // report is always generated after tests run
-}
-
-jacocoTestReport {
-    dependsOn test // tests are required to run before generating the report
-    reports {
-        xml.required = false
-        csv.required = false
-        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
-    }
+junitJacoco {
+  jacocoVersion = '0.8.3' // type String
+  ignoreProjects = [] // type String array
+  excludes // type String List
+  includeNoLocationClasses = false // type boolean
+  includeInstrumentationCoverageInMergedReport = false // type boolean
+  xml.enabled = true
+  csv.enabled = true
+  html.enabled = true
 }
 

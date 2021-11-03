@@ -4,13 +4,11 @@ plugins {
     //id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
-    // id 'jacoco'
+    id "com.dicedmelon.gradle.jacoco-android" version "0.1.5"
 }
 
-apply plugin: 'com.android.application'
-
 android {
-    compileSdkVersion 31 // Version appended to compileSdk
+    compileSdk 31
 
     buildFeatures{
         dataBinding true
@@ -20,7 +18,7 @@ android {
     defaultConfig {
         applicationId "com.example.hier"
         minSdk 21
-        targetSdkVersion 31 // Version appended to targetSdkVersion
+        targetSdk 31
         versionCode 1
         versionName "1.0"
         //TODO IMPORTANT change BASE_URL to backend-URL!!

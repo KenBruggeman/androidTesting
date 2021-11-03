@@ -29,9 +29,6 @@ buildscript {
     }
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'com.dicedmelon.gradle.jacoco-android'
-
 jacoco {
   toolVersion = "0.8.4"
 }

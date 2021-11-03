@@ -18,7 +18,7 @@ android {
     defaultConfig {
         applicationId "com.example.hier"
         minSdk 21
-        targetSdk 31
+        targetSdkVersion 31 // Version appended to targetSdkVersion
         versionCode 1
         versionName "1.0"
         //TODO IMPORTANT change BASE_URL to backend-URL!!

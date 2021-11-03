@@ -27,7 +27,6 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'net.saliman.gradle.plugin.cobertura.CoberturaPlugin'
 
 task clean(type: Delete) {
     delete rootProject.buildDir

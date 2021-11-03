@@ -4,10 +4,8 @@ plugins {
     //id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
-    id "net.saliman.cobertura" version "4.0.0"
+    id 'jacoco'
 }
-
-apply plugin: 'com.android.application'
 
 android {
     compileSdk 31

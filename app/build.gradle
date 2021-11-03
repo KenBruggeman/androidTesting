@@ -1,11 +1,13 @@
 plugins {
-     id 'com.android.application'
+    id 'com.android.application'
     id 'kotlin-android'
     //id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
     // id 'jacoco'
 }
+
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 31 // Version appended to compileSdk

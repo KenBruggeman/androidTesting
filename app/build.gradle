@@ -8,6 +8,14 @@ plugins {
     id 'org.sonarqube' version '3.3'
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+
+test.finalizedBy jacocoTestReport
+
 android {
     compileSdk 31
 
@@ -97,5 +105,11 @@ dependencies {
 sonarqube {
     properties {
         property 'sonar.host.url', 'http://192.168.56.200:9000'
+        property 'sonar.login', 'admin'
+        property 'sonar.password', 'admin'
     }
+}
+
+tasks.named('sonarqube').configure {
+    dependsOn test
 }

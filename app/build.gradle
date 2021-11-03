@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    // id 'kotlin-android-extensions'
+    //id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
     id 'net.saliman.cobertura' version '4.0.0'
@@ -27,9 +27,6 @@ android {
     }
 
     buildTypes {
-        debug {
-            testCoverageEnabled true
-        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -41,13 +38,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-        testOptions {
-        unitTests.all {
-            jacoco {
-                includeNoLocationClasses = true
-            }
-        }
     }
 }
 

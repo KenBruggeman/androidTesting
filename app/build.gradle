@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdkVersion 31 // Version appended to compileSdk
 
     buildFeatures{
         dataBinding true

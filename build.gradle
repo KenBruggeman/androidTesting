@@ -40,6 +40,6 @@ tasks.withType(Test) {
   jacoco.includeNoLocationClasses = true
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}

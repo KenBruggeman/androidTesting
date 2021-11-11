@@ -12,9 +12,6 @@ buildscript {
     }
 
     repositories {
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
         google()
         mavenCentral()
     }
@@ -22,21 +19,12 @@ buildscript {
         classpath "com.android.tools.build:gradle:7.0.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
-        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.5'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-jacoco {
-  toolVersion = "0.8.4"
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
-
-tasks.withType(Test) {
-  jacoco.includeNoLocationClasses = true
-}
-
-//task clean(type: Delete) {
-//    delete rootProject.buildDir
-//}

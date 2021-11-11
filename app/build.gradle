@@ -4,7 +4,7 @@ plugins {
     //id 'kotlin-android-extensions'
     id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
-    id "com.dicedmelon.gradle.jacoco-android" version "0.1.5"
+    id "checkstyle"
 }
 
 android {
